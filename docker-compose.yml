@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  calculadora:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cal-rust
+    container_name: cal-rust-app
+    stdin_open: true    # habilita -i
+    tty: true           # habilita -t
+    # command: ["./cal"]   # opcional, se usa el CMD del Dockerfile
